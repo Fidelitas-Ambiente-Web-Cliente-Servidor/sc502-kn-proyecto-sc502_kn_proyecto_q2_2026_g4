@@ -1,202 +1,122 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Servicios Médicos | Clínica Salud Local</title>
+    <title>Servicios Médicos | MedicalPlus</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/servicios.css">
 </head>
 
 <body>
 
-    <!-- Barra de navegación principal -->
-    <nav class="navbar navbar-expand-lg navbar-dark barra-navegacion">
-        <div class="container">
-
-            <!-- Nombre de la clínica -->
-            <a class="navbar-brand fw-bold" href="servicios.html">
-                Clínica Salud Local
+    <header class="encabezado-principal">
+        <div class="logo-medical">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <span class="icono-cruz">✚</span> MedicalPlus
             </a>
-
-            <!-- Botón que aparece en pantallas pequeñas para abrir el menú -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <!-- Opciones del menú de navegación -->
-            <div class="collapse navbar-collapse" id="menuPrincipal">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="servicios.html">Inicio</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="servicios.html">Servicios</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Doctores</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Citas</a>
-                    </li>
-                </ul>
-            </div>
         </div>
-    </nav>
-
-    <!-- Encabezado principal de la página -->
-    <header class="encabezado-servicios">
-        <div class="container text-center">
-            <h1>Servicios Médicos</h1>
-
-            <p>
-                Conozca los servicios disponibles en nuestra clínica y solicite una cita
-                de manera rápida y sencilla.
-            </p>
+        <nav class="navegacion-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="especialistas.html">Especialistas</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+        <div class="navegacion-botones">
+            <a href="login.html" class="btn-outline">Iniciar Sesión</a>
+            <a href="registro.html" class="boton-cita btn-registro">Crear Cuenta</a>
         </div>
     </header>
 
-    <!-- Contenido principal con las tarjetas de servicios -->
+    <header class="encabezado-servicios text-center">
+        <div class="container">
+            <h1>Nuestros Servicios Médicos</h1>
+            <p>Conozca las especialidades disponibles en nuestra clínica y solicite una cita de manera rápida y
+                sencilla.</p>
+        </div>
+    </header>
+
     <main class="container py-5">
         <div class="row g-4">
 
-            <!-- Tarjeta del servicio Medicina General -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
-
-                        <!-- Ícono representativo del servicio -->
+                    <div class="card-body text-center">
                         <div class="icono-servicio">🩺</div>
-
                         <h3 class="card-title">Medicina General</h3>
-
-                        <p class="card-text">
-                            Atención médica para consultas generales, chequeos preventivos
-                            y orientación sobre su salud.
-                        </p>
-
-                        <!-- Costo aproximado de la consulta -->
-                        <p class="precio">Costo aproximado: ₡20 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Medicina General')">
-                            Solicitar cita
-                        </button>
+                        <p class="card-text">Atención médica para consultas generales, chequeos preventivos y
+                            orientación sobre su salud.</p>
+                        <button class="btn boton-cita w-100 mt-3" onclick="solicitarCita('Medicina General')">Solicitar
+                            cita</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta del servicio Odontología -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="icono-servicio">🦷</div>
-
                         <h3 class="card-title">Odontología</h3>
-
-                        <p class="card-text">
-                            Consultas dentales, limpiezas, revisión de salud bucal y
-                            tratamientos preventivos.
-                        </p>
-
-                        <p class="precio">Costo aproximado: ₡25 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Odontología')">
-                            Solicitar cita
-                        </button>
+                        <p class="card-text">Consultas dentales, limpiezas, revisión de salud bucal y tratamientos
+                            preventivos.</p>
+                        <button class="btn boton-cita w-100 mt-3" onclick="solicitarCita('Odontología')">Solicitar
+                            cita</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta del servicio Psicología -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="icono-servicio">🧠</div>
-
                         <h3 class="card-title">Psicología</h3>
-
-                        <p class="card-text">
-                            Espacio profesional de apoyo emocional, orientación y atención
-                            psicológica para pacientes.
-                        </p>
-
-                        <p class="precio">Costo aproximado: ₡30 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Psicología')">
-                            Solicitar cita
-                        </button>
+                        <p class="card-text">Espacio profesional de apoyo emocional, orientación y atención psicológica
+                            para pacientes.</p>
+                        <button class="btn boton-cita w-100 mt-3" onclick="solicitarCita('Psicología')">Solicitar
+                            cita</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta del servicio Pediatría -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="icono-servicio">👶</div>
-
                         <h3 class="card-title">Pediatría</h3>
-
-                        <p class="card-text">
-                            Atención médica enfocada en bebés, niños y adolescentes para el
-                            seguimiento de su crecimiento y salud.
-                        </p>
-
-                        <p class="precio">Costo aproximado: ₡25 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Pediatría')">
-                            Solicitar cita
-                        </button>
+                        <p class="card-text">Atención médica enfocada en bebés, niños y adolescentes para el seguimiento
+                            de su crecimiento.</p>
+                        <button class="btn boton-cita w-100 mt-3" onclick="solicitarCita('Pediatría')">Solicitar
+                            cita</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta del servicio Nutrición -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
-                        <div class="icono-servicio">🥗</div>
-
-                        <h3 class="card-title">Nutrición</h3>
-
-                        <p class="card-text">
-                            Evaluación y orientación nutricional para mejorar los hábitos
-                            alimenticios y el bienestar general.
-                        </p>
-
-                        <p class="precio">Costo aproximado: ₡22 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Nutrición')">
-                            Solicitar cita
-                        </button>
+                    <div class="card-body text-center">
+                        <div class="icono-servicio">❤️</div>
+                        <h3 class="card-title">Cardiología</h3>
+                        <p class="card-text">Diagnóstico y tratamiento de enfermedades del corazón y del sistema
+                            circulatorio.</p>
+                        <button class="btn boton-cita w-100 mt-3" onclick="solicitarCita('Cardiología')">Solicitar
+                            cita</button>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta del servicio Laboratorio Clínico -->
             <div class="col-md-6 col-lg-4">
                 <div class="card tarjeta-servicio h-100">
-                    <div class="card-body">
+                    <div class="card-body text-center">
                         <div class="icono-servicio">🧪</div>
-
-                        <h3 class="card-title">Laboratorio Clínico</h3>
-
-                        <p class="card-text">
-                            Realización de exámenes básicos de laboratorio para apoyar el
-                            diagnóstico médico.
-                        </p>
-
-                        <p class="precio">Costo aproximado: ₡15 000</p>
-
-                        <button class="btn boton-cita w-100" onclick="solicitarCita('Laboratorio Clínico')">
-                            Solicitar cita
-                        </button>
+                        <h3 class="card-title">Laboratorio</h3>
+                        <p class="card-text">Realización de exámenes básicos de laboratorio para apoyar el diagnóstico
+                            médico preciso.</p>
+                        <button class="btn boton-cita w-100 mt-3"
+                            onclick="solicitarCita('Laboratorio Clínico')">Solicitar cita</button>
                     </div>
                 </div>
             </div>
@@ -204,23 +124,52 @@
         </div>
     </main>
 
-    <!-- Sección final con mensaje de ayuda -->
-    <section class="seccion-informacion">
-        <div class="container text-center">
+    <section class="seccion-informacion text-center">
+        <div class="container">
             <h2>¿Necesita ayuda para reservar?</h2>
-            <p>Puede seleccionar un servicio y continuar con el proceso de solicitud de cita.</p>
+            <p>Seleccione la especialidad que busca y será dirigido a nuestra plataforma de agendamiento.</p>
         </div>
     </section>
 
-    <!-- Pie de página del sistema -->
-    <footer class="pie-pagina text-center">
-        <p class="mb-0">© 2026 Clínica Salud Local | Sistema de Gestión y Reserva de Citas</p>
+    <footer class="pie-pagina-principal">
+        <div class="footer-contenedor">
+            <div class="footer-columna">
+                <h3><span class="icono-cruz">✚</span> MedicalPlus</h3>
+                <p>Transformando la gestión médica con tecnología innovadora para brindar la mejor experiencia a
+                    profesionales y pacientes.</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Navegación</h4>
+                <a href="index.html">Inicio</a>
+                <a href="servicios.html">Servicios</a>
+                <a href="especialistas.html">Especialistas</a>
+                <a href="reservas.html">Reservas</a>
+            </div>
+            <div class="footer-columna">
+                <h4>Contacto</h4>
+                <p>✉ info@medicalplus.com</p>
+                <p>📞 +506 2021-2312</p>
+                <p>📍 Centro Médico, San Jose</p>
+            </div>
+            <div class="footer-columna">
+                <h4>Síguenos</h4>
+                <div class="redes-iconos">
+                    <a href="#">FB</a>
+                    <a href="#">TW</a>
+                    <a href="#">IG</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-inferior">
+            <p>&copy; 2026 MedicalPlus. Todos los derechos reservados.</p>
+            <div class="footer-legales">
+                <a href="#">Términos</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
     </footer>
 
-    <!-- Script de Bootstrap para que funcione el menú en celular -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
     <script src="js/servicios.js"></script>
-
 </body>
+
 </html>

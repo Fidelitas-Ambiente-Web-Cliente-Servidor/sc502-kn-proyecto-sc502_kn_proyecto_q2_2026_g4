@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Cuenta | MedicalPlus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/auth.css">
+</head>
+
+<body>
+
+    <header class="encabezado-principal">
+        <div class="logo-medical">
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <span class="icono-cruz">✚</span> MedicalPlus
+            </a>
+        </div>
+        <nav class="navegacion-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="especialistas.html">Especialistas</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+        <div class="navegacion-botones">
+            <a href="login.html" class="btn-outline">Iniciar Sesión</a>
+            <a href="registro.html" class="boton-cita btn-registro">Crear Cuenta</a>
+        </div>
+    </header>
+
+    <main class="auth-seccion">
+        <div class="auth-tarjeta">
+
+            <div class="auth-imagen">
+                <h2>Únete a nuestra <br>comunidad médica.</h2>
+                <p>Crea tu cuenta en minutos y descubre una nueva forma de cuidar tu salud con tecnología avanzada.</p>
+            </div>
+
+            <div class="auth-formulario">
+                <h3>Crear Cuenta</h3>
+
+                <form action="index.html" method="GET">
+                    <div class="form-grupo">
+                        <label for="nombre">Nombre Completo</label>
+                        <input type="text" id="nombre" placeholder="Ej. Juan Pérez" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="correo_reg">Correo Electrónico</label>
+                        <input type="email" id="correo_reg" placeholder="ejemplo@correo.com" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="password_reg">Contraseña</label>
+                        <input type="password" id="password_reg" placeholder="********" required>
+                    </div>
+
+                    <div class="form-grupo">
+                        <label for="password_conf">Confirmar Contraseña</label>
+                        <input type="password" id="password_conf" placeholder="********" required>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Registrarme</button>
+
+                    <button type="button" class="btn-google">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
+                            alt="Google Logo" width="20">
+                        Registrarse con Google
+                    </button>
+                </form>
+
+                <p class="auth-enlace">
+                    ¿Ya tienes una cuenta? <a href="login.html">Inicia sesión aquí</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="pie-pagina-principal">
+        <div class="footer-inferior" style="justify-content: center; padding: 20px;">
+            <p>&copy; 2026 MedicalPlus. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+
+</html>

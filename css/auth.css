@@ -1,0 +1,154 @@
+.auth-seccion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: calc(100vh - 200px);
+    /* Ajusta para que no quede pegado al header/footer */
+}
+
+.auth-tarjeta {
+    display: flex;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    max-width: 900px;
+    width: 100%;
+}
+
+/* --- Mitad de la Imagen --- */
+.auth-imagen {
+    flex: 1;
+    background: linear-gradient(135deg, rgba(11, 79, 108, 0.8), rgba(27, 152, 181, 0.8)), url('https://images.pexels.com/photos/1172064/pexels-photo-1172064.jpeg') center/cover;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.auth-imagen h2 {
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.auth-imagen p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* --- Mitad del Formulario --- */
+.auth-formulario {
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-formulario h3 {
+    color: #0b4f6c;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 8px;
+    color: #243447;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.form-grupo input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #dceff5;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-grupo input:focus {
+    border-color: #1b98b5;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 15px;
+    background-color: #0b4f6c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-submit:hover {
+    background-color: #083b50;
+}
+
+.btn-google {
+    width: 100%;
+    padding: 15px;
+    background-color: white;
+    color: #243447;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s;
+}
+
+.btn-google:hover {
+    background-color: #f4f8fb;
+}
+
+.auth-enlace {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+}
+
+.auth-enlace a {
+    color: #1b98b5;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.auth-enlace a:hover {
+    text-decoration: underline;
+}
+
+
+@media (max-width: 768px) {
+    .auth-tarjeta {
+        flex-direction: column;
+    }
+
+    .auth-imagen {
+        padding: 40px 20px;
+    }
+
+    .auth-formulario {
+        padding: 30px 20px;
+    }
+}

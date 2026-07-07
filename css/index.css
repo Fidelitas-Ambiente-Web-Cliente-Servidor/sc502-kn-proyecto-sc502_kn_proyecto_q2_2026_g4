@@ -1,0 +1,137 @@
+.hero-seccion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.hero-contenido {
+    flex: 1;
+    max-width: 550px;
+}
+
+.hero-etiqueta {
+    color: #1b98b5;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+}
+
+.hero-titulo {
+    font-size: 3.5rem;
+    color: #0b4f6c;
+    line-height: 1.1;
+    margin: 15px 0;
+    font-weight: bold;
+}
+
+.hero-descripcion {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.hero-beneficios {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 35px;
+}
+
+.hero-beneficios li {
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    color: #0b4f6c;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.hero-boton {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.hero-imagen-contenedor {
+    flex: 1;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-imagen {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+
+.tarjeta-flotante {
+    position: absolute;
+    bottom: -30px;
+    left: -40px;
+    background-color: white;
+    padding: 20px 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    display: flex;
+    gap: 25px;
+}
+
+.stat {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #243447;
+}
+
+.stat strong {
+    color: #0b4f6c;
+    font-size: 1.6rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 992px) {
+    .hero-seccion {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-contenido {
+        margin-bottom: 50px;
+    }
+
+    .hero-beneficios li {
+        justify-content: center;
+    }
+
+    .hero-titulo {
+        font-size: 2.5rem;
+    }
+
+    .tarjeta-flotante {
+        left: 50%;
+        bottom: -20px;
+        transform: translateX(-50%);
+        width: 90%;
+        justify-content: space-around;
+        gap: 10px;
+        padding: 15px;
+    }
+
+    .hero-imagen-contenedor {
+        justify-content: center;
+    }
+}

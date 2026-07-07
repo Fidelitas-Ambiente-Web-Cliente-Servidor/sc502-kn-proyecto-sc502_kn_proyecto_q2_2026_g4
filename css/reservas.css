@@ -1,0 +1,63 @@
+.reservas-container {
+    max-width: 1000px;
+    margin:
+        40px auto;
+    padding: 20px;
+}
+
+.reservas-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.form-cita {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-grupo input,
+.form-grupo select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.grilla-horarios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.btn-hora {
+    padding: 10px;
+    border: 1px solid #0b4f6c;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-hora:hover,
+.btn-hora.seleccionado {
+    background: #0b4f6c;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .reservas-grid {
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendar Cita | MedicalPlus</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/reservas.css">
+</head>
+
+<body>
+
+    <header class="encabezado-principal">
+        <div class="logo-medical"><a href="index.html" style="text-decoration:none; color:inherit;">✚ MedicalPlus</a>
+        </div>
+        <nav class="navegacion-enlaces">
+            <a href="index.html">Inicio</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="reservas.html">Reservas</a>
+        </nav>
+        <div class="navegacion-botones">
+            <a href="login.html" class="btn-outline">Iniciar Sesión</a>
+        </div>
+    </header>
+
+    <main class="reservas-container">
+        <h1>Agenda tu Cita en Minutos</h1>
+
+        <div class="reservas-grid">
+            <form id="form-cita" class="form-cita">
+                <div class="form-grupo">
+                    <label>Fecha de la Cita</label>
+                    <input type="date" id="fecha" required>
+                </div>
+                <div class="form-grupo">
+                    <label>Especialidad</label>
+                    <select id="especialidad">
+                        <option>Medicina General</option>
+                        <option>Odontología</option>
+                        <option>Psicología</option>
+                    </select>
+                </div>
+                <div class="form-grupo">
+                    <label>Datos del Paciente</label>
+                    <input type="text" id="nombre" placeholder="Nombre completo" required>
+                </div>
+                <button type="submit" class="boton-cita">Confirmar Cita</button>
+            </form>
+
+            <div class="horarios-seccion">
+                <h3>Horarios Disponibles</h3>
+                <div class="grilla-horarios" id="grilla-horarios">
+                    <button class="btn-hora">09:00 AM</button>
+                    <button class="btn-hora">10:00 AM</button>
+                    <button class="btn-hora">02:00 PM</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/reservas.js"></script>
+</body>
+
+</html>
