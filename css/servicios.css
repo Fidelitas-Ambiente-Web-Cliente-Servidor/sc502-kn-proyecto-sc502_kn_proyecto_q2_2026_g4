@@ -1,64 +1,53 @@
-* {
-    box-sizing: border-box;
-}
-
-/* Estilos generales de toda la página */
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f8fb;
-    color: #243447;
+    color: #222;
 }
 
-/* Color principal de la barra de navegación */
-.barra-navegacion {
+.menu-principal {
     background-color: #0b4f6c;
 }
 
-/* Diseño del encabezado de servicios */
-.encabezado-servicios {
-    padding: 70px 20px;
-    background: linear-gradient(135deg, #0b4f6c, #1b98b5);
-    color: white;
+.encabezado {
+    background-color: #d9eef5;
+    padding: 60px 20px;
 }
 
-/* Tamaño y grosor del título principal */
-.encabezado-servicios h1 {
-    font-size: 2.5rem;
+.encabezado h1 {
+    color: #0b4f6c;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
-.encabezado-servicios p {
-    max-width: 700px;
-    margin: 15px auto 0;
-    font-size: 1.1rem;
+.encabezado p {
+    max-width: 800px;
+    margin: auto;
+    font-size: 18px;
 }
 
 .tarjeta-servicio {
-    border: none;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: 1px solid #d5d5d5;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
 }
 
 .tarjeta-servicio:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-}
-
-.icono-servicio {
-    font-size: 3rem;
-    margin-bottom: 15px;
+    transform: translateY(-5px);
 }
 
 .tarjeta-servicio h3 {
     color: #0b4f6c;
+    font-size: 22px;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
-
 .tarjeta-servicio p {
-    line-height: 1.6;
+    font-size: 15px;
+    line-height: 1.5;
 }
 
 .precio {
@@ -66,44 +55,48 @@ body {
     font-weight: bold;
 }
 
-.boton-cita {
+.btn-servicio {
     background-color: #0b4f6c;
     color: white;
-    border: none;
+    width: 100%;
     font-weight: bold;
 }
 
-/* Cambio de color al colocar el mouse sobre el botón */
-.boton-cita:hover {
+.btn-servicio:hover {
     background-color: #083b50;
     color: white;
 }
 
-.seccion-informacion {
-    padding: 45px 20px;
-    background-color: #dceff5;
+.informacion-final {
+    background-color: #e9f5f8;
+    padding: 40px 20px;
 }
 
-/* Estilo del título de la sección informativa */
-.seccion-informacion h2 {
+.informacion-final h2 {
     color: #0b4f6c;
     font-weight: bold;
 }
 
-/* Diseño del pie de página */
 .pie-pagina {
-    padding: 20px;
     background-color: #0b4f6c;
     color: white;
+    padding: 15px;
 }
 
-/* Ajustes para pantallas pequeñas como celulares */
+.pie-pagina p {
+    margin: 0;
+}
+
 @media (max-width: 576px) {
-    .encabezado-servicios {
-        padding: 50px 15px;
+    .encabezado {
+        padding: 40px 15px;
     }
 
-    .encabezado-servicios h1 {
-        font-size: 2rem;
+    .encabezado h1 {
+        font-size: 30px;
+    }
+
+    .encabezado p {
+        font-size: 16px;
     }
 }
