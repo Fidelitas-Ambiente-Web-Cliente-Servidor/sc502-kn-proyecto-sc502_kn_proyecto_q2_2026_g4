@@ -1,8 +1,8 @@
 <?php
 
-$servidor = "localhost";
+$servidor = "db";
 $usuario = "root";
-$contrasena = "";
+$contrasena = "root";
 $baseDatos = "clinica_salud_local";
 
 $conexion = new mysqli($servidor, $usuario, $contrasena, $baseDatos);

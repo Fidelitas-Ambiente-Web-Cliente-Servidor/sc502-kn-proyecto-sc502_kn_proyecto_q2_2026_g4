@@ -1,8 +1,4 @@
-CREATE DATABASE IF NOT EXISTS clinica_salud_local;
-
-USE clinica_salud_local;
-
-CREATE TABLE IF NOT EXISTS servicio_medico (
+CREATE TABLE IF NOT EXISTS clinica_salud_local (
     id_servicio INT AUTO_INCREMENT PRIMARY KEY,
     nombre_servicio VARCHAR(100) NOT NULL,
     descripcion TEXT NOT NULL,
