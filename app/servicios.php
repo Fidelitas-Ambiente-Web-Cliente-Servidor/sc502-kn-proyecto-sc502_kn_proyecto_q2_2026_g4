@@ -190,7 +190,7 @@ $resultadoServicios = $conexion->query($sqlServicios);
 </head>
 
 <body>
-<!-- Menú principal de navegación. -->
+    <!-- Menú principal de navegación. -->
     <nav class="navbar navbar-expand-lg navbar-dark menu-principal">
         <div class="container">
             <a class="navbar-brand fw-bold" href="servicios.php">
@@ -211,12 +211,19 @@ $resultadoServicios = $conexion->query($sqlServicios);
 
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a href="servicios.php" class="nav-link">Servicios</a></li>
-                    <li class="nav-item"><a href="especialidades.php" class="nav-link">Especialidades</a></li>
-                    <li class="nav-item"><a href="doctores.php" class="nav-link">Doctores</a></li>
+                    <li class="nav-item"><a href="servicios.php" class="nav-link active">Servicios</a></li>
+                    <li class="nav-item"><a href="especialidades.php" class="nav-link ">Especialidades</a></li>
+                    <li class="nav-item"><a href="doctores.php" class="nav-link ">Doctores</a></li>
                     <li class="nav-item"><a href="horarios.php" class="nav-link">Horarios</a></li>
-                    <li class="nav-item"><a href="citas.php" class="nav-link active">Citas</a></li>
+                    <li class="nav-item"><a href="citas.php" class="nav-link ">Citas</a></li>
                     <li class="nav-item"><a href="pacientes.php" class="nav-link">Pacientes</a></li>
+         <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+            <form action="/logout.php" method="POST">
+                <button type="submit" class="btn btn-outline-light">
+                    Cerrar sesión
+                </button>
+            </form>
+        </li>
                 </ul>
             </div>
         </div>

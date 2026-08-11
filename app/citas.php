@@ -6,8 +6,10 @@ require_once "config/conexion.php";
 // Mensaje recibido después de una operación exitosa o generado por un error.
 $mensaje = trim($_GET["mensaje"] ?? "");
 
+// Estados permitidos para una cita médica.
 $estadosPermitidos = ["Programada", "Confirmada", "Atendida", "Cancelada"];
 
+// Relación entre el número ISO del día y el nombre almacenado en horarios_doctor.
 $diasSemana = [
     1 => "Lunes",
     2 => "Martes",
@@ -31,6 +33,7 @@ function redirigirCitas($mensaje)
     exit;
 }
 
+// Devuelve el color de Bootstrap correspondiente al estado de la cita.
 function claseEstadoCita($estado)
 {
     $clases = [
@@ -43,6 +46,7 @@ function claseEstadoCita($estado)
     return $clases[$estado] ?? "bg-secondary";
 }
 
+// Se procesan las acciones enviadas desde los formularios.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $accion = $_POST["accion"] ?? "";
 
@@ -67,6 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $estado = $_POST["estado"] ?? "";
             $observaciones = trim($_POST["observaciones"] ?? "");
 
+            // Para editar, también se valida el identificador de la cita.
             $idCita = 0;
 
             if ($accion == "editar") {

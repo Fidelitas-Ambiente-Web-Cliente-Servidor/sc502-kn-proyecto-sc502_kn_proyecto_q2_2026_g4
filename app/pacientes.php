@@ -1,8 +1,11 @@
 <?php
+// Se incluye el archivo que establece la conexión con la base de datos.
 require_once __DIR__ . "/config/autenticacion.php";
 require_once __DIR__ . "/config/conexion.php";
+// Variable utilizada para mostrar mensajes al usuario.
 $mensaje = "";
 
+// Función para mostrar datos de forma segura dentro del HTML.
 function escaparPaciente($valor)
 {
     return htmlspecialchars((string) $valor, ENT_QUOTES, "UTF-8");
@@ -24,6 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $fechaNacimiento = $_POST["fecha_nacimiento"] ?? "";
             $contrasena = $_POST["contrasena"] ?? "";
 
+            // Se validan la cédula, el teléfono, el correo y la fecha.
             $cedulaValida = preg_match('/^[A-Za-z0-9-]{6,20}$/', $cedula);
             $telefonoValido = preg_match('/^[0-9+\-() ]{7,20}$/', $telefono);
             $correoValido = filter_var($correo, FILTER_VALIDATE_EMAIL);
@@ -32,6 +36,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $fecha->format("Y-m-d") === $fechaNacimiento &&
                 $fechaNacimiento <= date("Y-m-d");
 
+            // Para editar, se valida también el identificador del paciente.
             $idPaciente = 0;
 
             if ($accion == "editar") {
@@ -162,6 +167,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             }
         }
     } catch (mysqli_sql_exception $error) {
+        // El error técnico se registra sin mostrar detalles internos al usuario.
         error_log($error->getMessage());
 
         if ((int) $error->getCode() === 1062) {
@@ -177,6 +183,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 // Variable que almacenará los datos del paciente seleccionado para editar.
 $pacienteEditar = null;
 
+// Se consulta el paciente cuando la URL contiene el parámetro editar.
 if (isset($_GET["editar"])) {
     $idEditar = filter_var($_GET["editar"], FILTER_VALIDATE_INT);
 
@@ -199,6 +206,7 @@ if (isset($_GET["editar"])) {
     }
 }
 
+// Se consultan los pacientes sin incluir sus contraseñas.
 $sqlPacientes = "SELECT id_paciente,
                         nombre,
                         apellido,
@@ -269,6 +277,7 @@ $resultadoPacientes = $conexion->query($sqlPacientes);
         </div>
     </nav>
 
+    <!-- Encabezado del módulo de pacientes. -->
     <header class="encabezado">
         <div class="container text-center">
             <h1>Pacientes</h1>
@@ -280,6 +289,7 @@ $resultadoPacientes = $conexion->query($sqlPacientes);
     </header>
 
     <main class="container my-5">
+        <!-- Mensajes generados por las operaciones del módulo. -->
         <?php if ($mensaje != "") { ?>
             <div class="alert alert-info text-center">
                 <?php echo escaparPaciente($mensaje); ?>
