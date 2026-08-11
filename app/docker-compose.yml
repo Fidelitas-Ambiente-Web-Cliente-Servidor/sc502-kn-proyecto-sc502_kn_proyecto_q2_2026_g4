@@ -1,0 +1,39 @@
+services:
+  web:
+    image: php:8.2-apache  
+    container_name: php-apache-demo
+    ports:
+      - "8080:80"
+    volumes:
+      - ./app:/var/www/html
+    depends_on:
+      - db
+ 
+  db:
+    image: mysql:8.0
+    container_name: mysql-demo
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: appdb
+      MYSQL_USER: appuser
+      MYSQL_PASSWORD: apppass
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3307:3306"
+ 
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: phpmyadmin-demo
+    depends_on:
+      - db
+    environment:
+      PMA_HOST: db
+      PMA_USER: root
+      PMA_PASSWORD: root
+    ports:
+      - "8082:80"   # phpMyAdmin -> http://localhost:8082
+ 
+volumes:
+  db_data:
